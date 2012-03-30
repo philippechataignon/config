@@ -1,0 +1,16 @@
+[user]
+    name = philippe
+    email = philippe@chataignon.com
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch -v
+    d =  diff HEAD
+	lg = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset'
+	hist = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
+[merge]
+	tool = meld
+[core]
+	editor = vim

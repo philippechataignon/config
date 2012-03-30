@@ -1,0 +1,9 @@
+[ui]
+username=philippe
+verbose=True
+
+[web]
+cacerts = /etc/ssl/certs/chataignon_ca.crt
+
+[extensions]
+git =
