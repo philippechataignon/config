@@ -8,9 +8,17 @@
     co = checkout
     br = branch -v
     d =  diff HEAD
-	lg = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset'
-	hist = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
+    lg = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset'
+    hist = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
+
 [merge]
-	tool = meld
+    tool = meld
+
 [core]
-	editor = vim
+    editor = vim
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
