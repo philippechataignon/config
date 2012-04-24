@@ -22,3 +22,5 @@
     status = auto
     branch = auto
 
+;[http]
+;    proxy = http://proxy2.justice.gouv.fr:8080
