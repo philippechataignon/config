@@ -1,0 +1,7 @@
+#!/bin/sh
+cp gitconfig ~/.gitconfig
+cp zshrc     ~/.zshrc
+cp vimrc     ~/.vimrc
+cp hgrc      ~/.hgrc
+cp psqlrc    ~/.psqlrc
+cp tmux.conf ~/.tmux.conf
