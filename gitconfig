@@ -23,5 +23,8 @@
     status = auto
     branch = auto
 
+[push]
+    default = upstream
+
 ;[http]
 ;    proxy = http://proxy2.justice.gouv.fr:8080
