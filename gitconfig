@@ -9,7 +9,7 @@
     br = branch -v
     d =  diff
     lg = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset'
-    hist = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
+    l = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
     f = fetch --prune -v
 
 [merge]
