@@ -9,6 +9,8 @@ autoload -Uz compinit
 compinit
 autoload -U colors
 colors
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git hg svn
 
 # définition des couleurs
 cn="%{$reset_color%}" # normal color
@@ -18,9 +20,19 @@ cb="%{$fg[blue]%}" # user info color
 PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~ ${cb}$ ${cn}"
 case $TERM in
     xterm* | screen)
-        precmd () {print -Pn "\e]0;%m:%~\a"}
+        precmd () {
+            print -Pn "\e]0;%m:%~\a"
+            vcs_info
+        }
         ;;
 esac
+setopt prompt_subst
+zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
+zstyle ':vcs_info:*' actionformats "{cs}%u%c ${cg}[%b]${cs}%a${cn}(%s)"
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr   "+"
+zstyle ':vcs_info:*' unstagedstr "*"
+RPROMPT='${vcs_info_msg_0_}'
 
 # alias
 alias ls='ls -F --color=auto'
