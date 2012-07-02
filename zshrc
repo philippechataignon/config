@@ -72,3 +72,9 @@ export PATH
 #else
 #    start_agent;
 #fi
+#
+
+# paramètres locaux
+if [[ -r ~/.zshlocal ]]; then
+    source ~/.zshlocal
+fi
