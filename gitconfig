@@ -27,5 +27,11 @@
 [push]
     default = upstream
 
+[credential "https://github.com"]
+	username = philippechataignon
+
+[credential "https://bitbucket.org"]
+	username = philippechataignon
+
 ;[http]
 ;    proxy = http://proxy2.justice.gouv.fr:8080
