@@ -29,7 +29,7 @@ case $TERM in
 esac
 setopt prompt_subst
 zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
-zstyle ':vcs_info:*' actionformats "{cs}%u%c ${cg}[%b]${cs}%a${cn}(%s)"
+zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' stagedstr   "+"
 zstyle ':vcs_info:*' unstagedstr "*"
