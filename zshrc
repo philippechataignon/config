@@ -1,9 +1,10 @@
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt auto_cd notify correct auto_pushd 
-setopt hash_list_all hup check_jobs
-setopt nomatch appendhistory
+HISTSIZE=5000
+SAVEHIST=100
+setopt AUTO_CD NOTIFY CORRECT AUTO_PUSHD 
+setopt HUP CHECK_JOBS
+setopt NOMATCH
+setopt EXTENDED_HISTORY SHARE_HISTORY
 bindkey -e
 autoload -Uz compinit
 compinit
