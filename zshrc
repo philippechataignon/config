@@ -14,11 +14,12 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg svn
 
 # définition des couleurs
-cn="%{$reset_color%}" # normal color
-cs="%{$fg[red]%}" # symbol color
-cg="%{$fg[green]%}" # symbol color
-cb="%{$fg[blue]%}" # user info color
-PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~ ${cb}$ ${cn}"
+# PS1="%~ %{%(#~$fg[red]~$fg[blue])%}%#%{$fg[default]%} "
+#
+cn="%{$reset_color%}"               # normal color
+cg="%{$fg[green]%}"                 # green
+cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
+PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
 case $TERM in
     xterm* | screen)
         precmd () {
