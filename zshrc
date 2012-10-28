@@ -37,8 +37,8 @@ zstyle ':vcs_info:*' unstagedstr "*"
 RPROMPT='${vcs_info_msg_0_}'
 
 # alias
-alias ls='ls -F --color=auto'
-alias ll='ls -l -F --color=auto'
+alias ls='ls -F'
+alias ll='ls -l -F'
 alias -g L="| less"
 alias -g H="| head"
 alias -g T="| tail"
