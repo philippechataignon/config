@@ -1,6 +1,7 @@
 #!/bin/sh
 cp gitconfig ~/.gitconfig
 cp zshrc     ~/.zshrc
+cp zshlocal  ~/.zshlocal
 cp vimrc     ~/.vimrc
 cp hgrc      ~/.hgrc
 cp psqlrc    ~/.psqlrc
