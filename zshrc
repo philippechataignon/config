@@ -4,7 +4,7 @@ SAVEHIST=100
 setopt AUTO_CD NOTIFY CORRECT AUTO_PUSHD 
 setopt HUP CHECK_JOBS
 setopt NOMATCH
-setopt EXTENDED_HISTORY SHARE_HISTORY
+setopt EXTENDED_HISTORY
 bindkey -e
 autoload -Uz compinit
 compinit
