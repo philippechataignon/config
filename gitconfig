@@ -1,5 +1,5 @@
 [user]
-    name = philippe
+    name = Philippe Chataignon
     email = philippe@chataignon.com
 
 [alias]
@@ -33,5 +33,5 @@
 [credential "https://bitbucket.org"]
 	username = philippechataignon
 
-;[http]
-;    proxy = http://proxy2.justice.gouv.fr:8080
+[include]
+    path = ".gitlocal"

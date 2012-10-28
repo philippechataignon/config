@@ -1,8 +1,8 @@
 #!/bin/sh
-cp gitconfig ~/.gitconfig
-cp zshrc     ~/.zshrc
-cp zshlocal  ~/.zshlocal
-cp vimrc     ~/.vimrc
-cp hgrc      ~/.hgrc
-cp psqlrc    ~/.psqlrc
-cp tmux.conf ~/.tmux.conf
+ln -sf $PWD/gitconfig ~/.gitconfig
+ln -sf $PWD/zshrc     ~/.zshrc
+cp  zshlocal  ~/.zshlocal
+cp  vimrc     ~/.vimrc
+cp  hgrc      ~/.hgrc
+cp  psqlrc    ~/.psqlrc
+cp  tmux.conf ~/.tmux.conf
