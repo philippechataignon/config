@@ -1,6 +1,7 @@
-[user]
-    name = Philippe Chataignon
-    email = philippe@chataignon.com
+# A préciser dans .gitlocal
+# [user]
+#     name = Username
+#     email = user@example.com
 
 [alias]
     st = status
@@ -19,19 +20,13 @@
 
 [core]
     editor = vim
-    pager = more
+    pager = less
 
 [color]
     ui = auto
 
 [push]
     default = upstream
-
-[credential "https://github.com"]
-	username = philippechataignon
-
-[credential "https://bitbucket.org"]
-	username = philippechataignon
 
 [include]
     path = ".gitlocal"
