@@ -77,7 +77,7 @@ au BufNewFile *.sh,*.bash 0put =\"#!/bin/zsh\<nl># -*- coding: UTF8 -*-\<nl>\<nl
 au BufNewFile *.py 0put=\"#!/usr/bin/env python2\"|1put=\"# -*- coding: utf-8 -*-\<nl>\<nl>\"|$
 
 au BufNewFile,BufRead *.mako set ft=html
-au BufNewFile,BufRead *.rst set tw=80 | set columns=80|set wrap
+au BufNewFile,BufRead *.rst set tw=80 | set wrap
 
 " Récupération de la position du curseur entre 2 ouvertures de fichiers
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
