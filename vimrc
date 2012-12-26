@@ -83,13 +83,14 @@ au BufNewFile,BufRead *.rst set tw=80 | set wrap
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 \| exe "normal g'\"" | endif
 
-"" donner des droits d'exécution si le fichier commence par #! et contient /bin/ dans son chemin
-"function ModeChange()
-"  if getline(1) =~ "^#!"
-"    if getline(1) =~ "/bin/"
-"      silent !chmod a+x <afile>
-"    endif
-"  endif
-"endfunction
-"
-"au BufWritePost * call ModeChange()
+" donner des droits d'exécution si le fichier commence par #! et contient /bin/ dans son chemin
+function ModeChange()
+  if getline(1) =~ "^#!"
+    if getline(1) =~ "/bin/"
+      silent !chmod a+x <afile>
+    endif
+  endif
+endfunction
+au BufWritePost * call ModeChange()
+
+" enlève trailing blanks à la fin des lignes pour les programmes
