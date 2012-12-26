@@ -94,3 +94,4 @@ endfunction
 au BufWritePost * call ModeChange()
 
 " enlève trailing blanks à la fin des lignes pour les programmes
+autocmd FileType python,rst,sas,c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
