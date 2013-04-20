@@ -9,8 +9,8 @@
     co = checkout
     br = branch -v
     d =  diff
-    lg = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset'
-    l = log --pretty=format:'%Cred%h% %Cblue%d% Creset%s %Cblue%cr %Cgreen(%an)%Creset' --graph --all
+    lg = log --date=short --pretty=format:'%Cblue%cd %Cgreen%h%Cred%d %Creset%s %Cblue%ce%Creset'
+    l  = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --all
     f = fetch --prune -v
     r = remote -v
 
