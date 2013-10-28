@@ -95,3 +95,7 @@ au BufWritePost * call ModeChange()
 
 " enlève trailing blanks à la fin des lignes pour les programmes
 autocmd FileType python,rst,sas,c,cpp,java,php autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" map CTRL+k S N (non-breaking space) to CTRL+space
+" remplacer Nul par <C-space> pour gvim
+imap <Nul> <C-k>NS
