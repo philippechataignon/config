@@ -27,7 +27,7 @@
     ui = auto
 
 [push]
-    default = upstream
+    default = current
 
 [include]
     path = ".gitlocal"
