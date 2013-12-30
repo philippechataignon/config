@@ -1,10 +1,19 @@
 HISTFILE=~/.histfile
-HISTSIZE=6000
+HISTSIZE=5000
 SAVEHIST=5000
-setopt auto_cd notify correct auto_pushd 
-setopt hup check_jobs
-setopt nomatch
-setopt extended_history histignorespace
+# auto_cd : si non cmd -> cd
+# auto_pushd : pousse le rép quand cd
+# correct : coorige cmd
+# check_jobs : vérifie si job ruuning
+# notify : status job immédiat
+# extended : ajoute timestamp
+# append : append histfile au lieu de replace
+# histignorespace : si cmd commence par space -> no history
+# prompt_subst : param command and arithm substitution in prompt
+
+setopt auto_cd auto_pushd correct
+setopt check_jobs notify
+setopt append_history extended_history histignorespace
 setopt prompt_subst
 
 bindkey -e
