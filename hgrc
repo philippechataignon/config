@@ -6,4 +6,3 @@ verbose=True
 cacerts = /etc/ssl/certs/chataignon_ca.crt
 
 [extensions]
-git =

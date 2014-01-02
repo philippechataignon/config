@@ -1,10 +1,21 @@
 HISTFILE=~/.histfile
 HISTSIZE=5000
-SAVEHIST=100
-setopt AUTO_CD NOTIFY CORRECT AUTO_PUSHD 
-setopt HUP CHECK_JOBS
-setopt NOMATCH
-setopt EXTENDED_HISTORY
+SAVEHIST=5000
+# auto_cd : si non cmd -> cd
+# auto_pushd : pousse le rép quand cd
+# correct : coorige cmd
+# check_jobs : vérifie si job ruuning
+# notify : status job immédiat
+# extended : ajoute timestamp
+# append : append histfile au lieu de replace
+# histignorespace : si cmd commence par space -> no history
+# prompt_subst : param command and arithm substitution in prompt
+
+setopt auto_cd auto_pushd correct
+setopt check_jobs notify
+setopt append_history extended_history histignorespace
+setopt prompt_subst
+
 bindkey -e
 autoload -Uz compinit
 compinit
@@ -13,13 +24,11 @@ colors
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git hg svn
 
-# définition des couleurs
-# PS1="%~ %{%(#~$fg[red]~$fg[blue])%}%#%{$fg[default]%} "
-#
 cn="%{$reset_color%}"               # normal color
 cg="%{$fg[green]%}"                 # green
 cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
 PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
+
 case $TERM in
     xterm* | screen)
         precmd () {
@@ -28,7 +37,6 @@ case $TERM in
         }
         ;;
 esac
-setopt prompt_subst
 zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
 zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
 zstyle ':vcs_info:*' check-for-changes true

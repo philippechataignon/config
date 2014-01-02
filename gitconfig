@@ -13,6 +13,7 @@
     l  = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --all
     f = fetch --prune -v
     r = remote -v
+    grepa = !git grep
 
 [merge]
     tool = meld
@@ -26,7 +27,7 @@
     ui = auto
 
 [push]
-    default = upstream
+    default = current
 
 [include]
     path = ".gitlocal"
