@@ -74,7 +74,7 @@ set history=500
 " shebang automatique lors de l'ouverture nouveau
 " d'un fichier *.py, *.sh (bash), modifier l'entête selon les besoins :
 au BufNewFile *.sh,*.bash 0put =\"#!/bin/zsh\<nl># -*- coding: UTF8 -*-\<nl>\<nl>\"|$
-au BufNewFile *.py 0put=\"#!/usr/bin/env python2\"|1put=\"# -*- coding: utf-8 -*-\<nl>\<nl>\"|$
+au BufNewFile *.py 0put=\"#!/usr/bin/env python\"|1put=\"# -*- coding: utf-8 -*-\<nl>\<nl>\"|$
 
 au BufNewFile,BufRead *.mako set ft=html
 au BufNewFile,BufRead *.rst set tw=80 | set wrap
@@ -82,16 +82,6 @@ au BufNewFile,BufRead *.rst set tw=80 | set wrap
 " Récupération de la position du curseur entre 2 ouvertures de fichiers
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 \| exe "normal g'\"" | endif
-
-" donner des droits d'exécution si le fichier commence par #! et contient /bin/ dans son chemin
-function ModeChange()
-  if getline(1) =~ "^#!"
-    if getline(1) =~ "/bin/"
-      silent !chmod a+x <afile>
-    endif
-  endif
-endfunction
-au BufWritePost * call ModeChange()
 
 " enlève trailing blanks à la fin des lignes pour les programmes
 au FileType python,rst,sas,c,cpp,java,php,sql au BufWritePre <buffer> :%s/\s\+$//e
