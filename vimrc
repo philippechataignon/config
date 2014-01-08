@@ -89,3 +89,7 @@ autocmd FileType python,rst,sas,c,cpp,java,php autocmd BufWritePre <buffer> :%s/
 " map CTRL+k S N (non-breaking space) to CTRL+space
 " remplacer Nul par <C-space> pour gvim
 imap <Nul> <C-k>NS
+
+" évite message No write since last change (add ! to override)
+" cache les buffers au lieu de les fermer
+set hidden
