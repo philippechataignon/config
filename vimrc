@@ -33,6 +33,7 @@ set preserveindent
 set noautoindent
 filetype plugin indent on
 filetype indent on
+
 " Largeur de l'autoindentation
 set shiftwidth=4
 " Arrondit la valeur de l'indentation
@@ -72,8 +73,7 @@ set nostartofline
 set history=500
 
 " shebang automatique lors de l'ouverture nouveau
-" d'un fichier *.py, *.sh (bash), modifier l'entête selon les besoins :
-au BufNewFile *.sh,*.bash 0put =\"#!/bin/zsh\<nl># -*- coding: UTF8 -*-\<nl>\<nl>\"|$
+" d'un fichier *.py modifier l'entête selon les besoins :
 au BufNewFile *.py 0put=\"#!/usr/bin/env python\"|1put=\"# -*- coding: utf-8 -*-\<nl>\<nl>\"|$
 
 au BufNewFile,BufRead *.mako set ft=html
