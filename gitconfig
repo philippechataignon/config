@@ -14,6 +14,8 @@
     f = fetch --prune -v
     r = remote -v
     grepa = !git grep
+    # use 'skipDefaultUpdate = true' if no update
+    up = remote update --prune
 
 [merge]
     tool = meld
