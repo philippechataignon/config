@@ -10,13 +10,14 @@
     br = branch -v
     d =  diff
     lg = log --date=short --pretty=format:'%Cblue%cd %Cgreen%h%Cred%d %Creset%s %Cblue%ce%Creset'
+    ll = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --branches
     l  = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --all
     f = fetch --prune -v
     r = remote -v
     grepa = !git grep
     # use 'skipDefaultUpdate = true' if no update
     up = remote update --prune
-    pushall = "!f() { for r in `git remote`; do echo Remote: $r; git push $r master; done; } ; f "
+    #pushall = "!f() { for r in `git remote`; do echo Remote: $r; git push $r master; done; } ; f "
 
 [merge]
     tool = meld
