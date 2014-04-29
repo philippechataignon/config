@@ -67,3 +67,7 @@ export PATH
 if [[ -r ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
+
+
+# autocomplétion pour apt ubuntu 14.04
+compctl -k "(search list show remove update install upgrade)" apt
