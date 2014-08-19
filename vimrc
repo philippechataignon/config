@@ -93,3 +93,5 @@ imap <Nul> <C-k>NS
 " évite message No write since last change (add ! to override)
 " cache les buffers au lieu de les fermer
 set hidden
+
+set mouse=a
