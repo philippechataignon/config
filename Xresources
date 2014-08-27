@@ -1,0 +1,17 @@
+!urxvt.font:             9x15bold,\
+!                        -misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,\
+!                        -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1, \
+!                        [codeset=JISX0208]xft:Kochi Gothic, \
+!                        xft:Bitstream Vera Sans Mono:autohint=true, \
+!                        xft:Code2000:antialias=false
+!urxvt.boldFont:         -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-15
+!urxvt.italicFont:       xft:Bitstream Vera Sans Mono:italic:autohint=true
+!urxvt.boldItalicFont:   xft:Bitstream Vera Sans Mono:bold:italic:autohint=true
+URxvt.scrollstyle:      plain
+URxvt.secondaryScroll:  true
+URxvt.saveLines:        16384
+
+urxvt.font:             xft:Ubuntu Mono:autohint=true:size=12.5
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
