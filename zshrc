@@ -32,8 +32,8 @@ PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
 case $TERM in
     rxvt-unicode | xterm* | screen)
         precmd () {
-            print -Pn "\e]0;%m:%~\a"
             vcs_info
+            print -Pn "\e]0;%m:%~\a"
         }
         ;;
 esac
