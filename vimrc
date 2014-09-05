@@ -94,4 +94,4 @@ imap <Nul> <C-k>NS
 " cache les buffers au lieu de les fermer
 set hidden
 
-set mouse=a
+" set mouse=a
