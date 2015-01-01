@@ -74,8 +74,7 @@ set history=500
 
 " shebang automatique lors de l'ouverture nouveau
 " d'un fichier *.py modifier l'entête selon les besoins :
-au BufNewFile *.py 0put=\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\<nl>from __future__ import division, print_function, absolute_import\<nl>\<nl>\"|$
-
+au BufNewFile *.py 0put=\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\<nl>from __future__ import division, print_function, absolute_import\<nl>\<nl>def main():\<nl>    pass\<nl>\<nl>if __name__ == '__main__':\<nl>    main()\"|$
 au BufNewFile,BufRead *.mako set ft=html
 au BufNewFile,BufRead *.rst set tw=80 | set wrap
 
@@ -93,5 +92,3 @@ imap <Nul> <C-k>NS
 " évite message No write since last change (add ! to override)
 " cache les buffers au lieu de les fermer
 set hidden
-
-" set mouse=a
