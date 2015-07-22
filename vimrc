@@ -28,9 +28,9 @@ set nowrap
 " Indispensable pour ne pas tout casser avec ce qui va suivre
 set preserveindent
 "" indentation automatique
-"set autoindent
+set autoindent
 " autoindent n'est spécifique à aucun langage et fonctionne en général moins bien
-set noautoindent
+"set noautoindent
 filetype plugin indent on
 filetype indent on
 
