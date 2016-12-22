@@ -1,3 +1,4 @@
+
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
@@ -62,6 +63,8 @@ bindkey '^[[3~' delete-char-or-list
 # ajoute ~/bin au PATH
 PATH=~/bin:$PATH
 export PATH
+export PYTHONIOENCODING=UTF-8
+
 
 # paramètres locaux
 if [[ -r ~/.zshlocal ]]; then
