@@ -11,10 +11,10 @@ set background&
 set ruler
 
 " Recherche en minuscule -> indépendante de la casse, une majuscule -> stricte
-set smartcase
+" set smartcase
 
 " Ne jamais respecter la casse (attention totalement indépendant du précédent mais de priorité plus faible)
-set ignorecase
+" set ignorecase
 
 " Affiche le nombre de lignes sélectionnées en mode visuel ou la touche/commande qu'on vient de taper en mode commande
 set showcmd
@@ -93,15 +93,15 @@ imap <Nul> <C-k>NS
 " cache les buffers au lieu de les fermer
 set hidden
 
-"folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
-
-let r_syntax_folding=1
-
-
-" save folder marks
-au BufWinLeave * mkview
-au BufReadPost * silent loadview
+""folding settings
+"set foldmethod=indent   "fold based on indent
+"set foldnestmax=10      "deepest fold is 10 levels
+"set nofoldenable        "dont fold by default
+"set foldlevel=1         "this is just what i use
+"
+"let r_syntax_folding=1
+"
+"
+"" save folder marks
+"au BufWinLeave * mkview
+"au BufReadPost * silent loadview
