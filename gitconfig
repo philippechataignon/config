@@ -8,6 +8,8 @@
     ci = commit
     co = checkout
     br = branch -v
+    pf = pull --ff-only
+    mf = merge --ff-only
     d =  diff
     lg = log --date=short --pretty=format:'%Cblue%cd %Cgreen%h%Cred%d %Creset%s %Cblue%ae%Creset'
     ll = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --branches
