@@ -46,12 +46,9 @@ zstyle ':vcs_info:*' unstagedstr "*"
 RPROMPT='${vcs_info_msg_0_}'
 
 # alias
-alias ls='ls -F'
-alias ll='ls -l -F'
 alias -g L="| less"
 alias -g H="| head"
 alias -g T="| tail"
-alias vi="vim"
 
 # code d'une touche par bindkey crtl+v
 bindkey '^[OH' beginning-of-line
@@ -60,17 +57,7 @@ bindkey '^[[1~' beginning-of-line
 bindkey '^[[4~' end-of-line
 bindkey '^[[3~' delete-char-or-list
 
-# ajoute ~/bin au PATH
-PATH=~/bin:$PATH
-export PATH
-export PYTHONIOENCODING=UTF-8
-
-
 # paramètres locaux
 if [[ -r ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
-
-
-# autocomplétion pour apt ubuntu 14.04
-compctl -k "(search list show remove update install upgrade)" apt

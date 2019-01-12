@@ -17,3 +17,12 @@
 #else
 #    start_agent;
 #fi
+
+## alias
+#alias ls='ls -F'
+#alias ll='ls -l -F'
+
+# ajoute ~/bin au PATH
+#PATH=~/bin:$PATH
+#export PATH
+#export PYTHONIOENCODING=UTF-8
