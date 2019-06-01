@@ -92,16 +92,4 @@ imap <Nul> <C-k>NS
 " évite message No write since last change (add ! to override)
 " cache les buffers au lieu de les fermer
 set hidden
-
-""folding settings
-"set foldmethod=indent   "fold based on indent
-"set foldnestmax=10      "deepest fold is 10 levels
-"set nofoldenable        "dont fold by default
-"set foldlevel=1         "this is just what i use
-"
-"let r_syntax_folding=1
-"
-"
-"" save folder marks
-"au BufWinLeave * mkview
-"au BufReadPost * silent loadview
+set cm=blowfish2

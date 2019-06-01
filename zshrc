@@ -1,4 +1,3 @@
-
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
@@ -61,3 +60,5 @@ bindkey '^[[3~' delete-char-or-list
 if [[ -r ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
+# autocomplétion pour apt ubuntu 14.04
+compctl -k "(search list show remove update install upgrade)" apt
