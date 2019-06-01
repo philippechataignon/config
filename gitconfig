@@ -11,7 +11,9 @@
     pf = pull --ff-only
     mf = merge --ff-only
     d =  diff
-    lg = log --date=short --pretty=format:'%Cblue%cd %Cgreen%h%Cred%d %Creset%s %Cblue%ae%Creset'
+    pf = pull --ff-only
+    mf = merge --ff-only
+    lg = log --date=short --pretty=format:'%Cblue%cd %Cgreen%h%Cred%d %Creset%s %Cblue%ce%Creset'
     ll = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --branches
     l  = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --all
     f = fetch --prune -v
