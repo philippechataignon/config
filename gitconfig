@@ -23,7 +23,7 @@
     grepa = !git grep
     # use 'skipDefaultUpdate = true' if no update
     up = remote update --prune
-    # pushall = "!f() { for r in `git remote`; do echo Remote: $r; git push $r master; done; } ; f "
+    pushall = "!f() { for r in `git remote`; do echo Remote: $r; git push $r master; done; } ; f "
 
 [merge]
     tool = meld
