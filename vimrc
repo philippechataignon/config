@@ -40,8 +40,8 @@ set shiftwidth=4
 set shiftround
 " Largeur du caractère tab
 set tabstop=4
-" Largeur de l'indentation de la touche tab
-set softtabstop=4
+" Largeur de l'indentation : -1 = sw
+set softtabstop=-1
 " Remplace les tab par des expaces
 set expandtab
 " Utilise shiftwidth à la place de tabstop en début de ligne (et backspace supprime d'un coup si ce sont des espaces)
@@ -77,6 +77,7 @@ set history=500
 au BufNewFile *.py 0put=\"#!/usr/bin/env python3\<nl>def main():\<nl>    pass\<nl>\<nl>if __name__ == '__main__':\<nl>    main()\"|$
 au BufNewFile,BufRead *.mako set ft=html
 au BufNewFile,BufRead *.rst set tw=80 | set wrap
+au BufNewFile,BufRead *.R,*.js,*.html,*.css set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 
 " Récupération de la position du curseur entre 2 ouvertures de fichiers
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
