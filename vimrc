@@ -74,7 +74,7 @@ set history=500
 
 " shebang automatique lors de l'ouverture nouveau
 " d'un fichier *.py modifier l'entête selon les besoins :
-au BufNewFile *.py 0put=\"#!/usr/bin/env python3\<nl>def main():\<nl>    pass\<nl>\<nl>if __name__ == '__main__':\<nl>    main()\"|$
+au BufNewFile *.py 0put=\"#!/usr/bin/env python3\<nl>\<nl>if __name__ == '__main__':\<nl>    pass\"|2
 au BufNewFile,BufRead *.mako set ft=html
 au BufNewFile,BufRead *.rst set tw=80 | set wrap
 au BufNewFile,BufRead *.R,*.js,*.html,*.css set tabstop=2 | set softtabstop=2 | set shiftwidth=2
