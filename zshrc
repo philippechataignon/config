@@ -50,10 +50,8 @@ alias -g H="| head"
 alias -g T="| tail"
 
 # code d'une touche par bindkey crtl+v
-bindkey '^[OH' beginning-of-line
-bindkey '^[OF' end-of-line
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[4~' end-of-line
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
 bindkey '^[[3~' delete-char-or-list
 
 # paramètres locaux
