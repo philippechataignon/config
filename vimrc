@@ -84,7 +84,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 \| exe "normal g'\"" | endif
 
 " enlève trailing blanks à la fin des lignes pour les programmes
-autocmd FileType python,rst,sas,c,cpp,java,php,sql,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType md,python,rst,sas,c,cpp,java,php,sql,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " map CTRL+k S N (non-breaking space) to CTRL+space
 " remplacer Nul par <C-space> pour gvim
