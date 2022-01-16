@@ -30,7 +30,7 @@ cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
 PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
 
 case $TERM in
-    linux | rxvt-unicode | xterm* | screen)
+    linux | rxvt-unicode | xterm* | screen | rxvt-unicode-256color)
         precmd () {
             vcs_info
             print -Pn "\e]0;%m:%~\a"
