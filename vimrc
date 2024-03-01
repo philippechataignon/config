@@ -10,6 +10,8 @@ set background&
 " Si c'est pas déjà fait, affiche la position du curseur
 set ruler
 
+set nohls
+
 " Recherche en minuscule -> indépendante de la casse, une majuscule -> stricte
 " set smartcase
 
@@ -84,7 +86,8 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 \| exe "normal g'\"" | endif
 
 " enlève trailing blanks à la fin des lignes pour les programmes
-autocmd FileType md,python,rst,sas,c,cpp,java,php,sql,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType r,rmd,md,asm,python,rst,sas,c,cpp,java,php,sql,tex,markdown autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType r setlocal ts=2 sts=2 sw=2 expandtab
 
 " map CTRL+k S N (non-breaking space) to CTRL+space
 " remplacer Nul par <C-space> pour gvim
