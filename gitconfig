@@ -16,7 +16,7 @@
     ll = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --branches
     l  = log --date=short --pretty=format:'%Cred%d %Creset%s %Cblue%cd %Cgreen%h%Creset' --graph --all
     f = fetch --prune -v
-    r = remote -v:
+    r = remote -v
     pf = pull --ff-only
     mf = merge --ff-only
     grepa = !git grep
