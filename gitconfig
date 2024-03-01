@@ -1,7 +1,6 @@
-# A préciser dans .gitlocal
-# [user]
-#     name = Username
-#     email = user@example.com
+[user]
+    name = Philippe Chataignon
+    email = philippe.chataignon@gmail.com
 
 [alias]
     st = status
