@@ -22,7 +22,7 @@ compinit
 autoload -U colors
 colors
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg svn
+zstyle ':vcs_info:*' enable git
 
 cn="%{$reset_color%}"               # normal color
 cg="%{$fg[green]%}"                 # green
