@@ -27,6 +27,7 @@
     pushallf = "!f() { for r in `git remote`; do echo Remote: $r; git push -f $r $(git rev-parse --abbrev-ref HEAD); done; } ; f"
     brdelall = "!f() { git branch -d $1 && (for r in `git remote`; do echo Remote: $r; git push $r --delete $1; done;) } ; f"
     brdelallf = "!f() { git branch -D $1; for r in `git remote`; do echo Remote: $r; git push $r --delete $1; done; } ; f"
+    rh = reset --hard
 
 [merge]
     tool = meld
@@ -47,3 +48,5 @@
 
 [include]
     path = ".gitlocal"
+[init]
+	defaultBranch = master
