@@ -6,6 +6,7 @@
     st = status
     ci = commit
     co = checkout
+    sw = switch
     br = branch -v
     pf = pull --ff-only
     mf = merge --ff-only
