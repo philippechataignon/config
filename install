@@ -3,10 +3,8 @@ ln -sf $PWD/gitconfig ~/.gitconfig
 ln -sf $PWD/zshrc     ~/.zshrc
 ln -sf $PWD/tmux.conf ~/.tmux.conf
 ln -sf $PWD/vimrc     ~/.vimrc
-cp  -i gitlocal  ~/.gitlocal
 cp  -i zshlocal  ~/.zshlocal
 cp  -i zlogin  ~/.zlogin
-cp  -i hgrc      ~/.hgrc
 cp  -i psqlrc    ~/.psqlrc
 mkdir -p ~/.config/jj
 ln config.toml ~/.config/jj
