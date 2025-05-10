@@ -11,6 +11,7 @@ email = "philippe.chataignon@gmail.com"
 [aliases]
 e = ["edit"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+la = ["log", "-r", "::"]
 f = ["git", "fetch", "--all-remotes"]
 d = ["diff", "--git"]
 mm = ["bookmark", "move", "--to", "@", "master"]
