@@ -21,3 +21,6 @@ pushp = ["git", "push", "-r", "@-"]
 
 [git]
 write-change-id-header = true
+
+[colors]
+"diff token" = {underline = false }
