@@ -16,10 +16,8 @@ f = ["git", "fetch", "--all-remotes"]
 d = ["diff", "--git"]
 mm = ["bookmark", "move", "--to", "@", "master"]
 mmp = ["bookmark", "move", "--to", "@-", "master"]
-push = ["git", "push"]
-
-# [revset-aliases]
-# 'trunk()' = 'master@ssp'
+push = ["git", "push", "-r", "@"]
+pushp = ["git", "push", "-r", "@-"]
 
 [git]
 write-change-id-header = true
