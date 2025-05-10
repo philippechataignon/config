@@ -1,0 +1,20 @@
+[ui]
+default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+editor = "vim"
+
+[user]
+name = "Philippe Chataignon"
+email = "philippe.chataignon@gmail.com"
+
+[aliases]
+e = ["edit"]
+l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+f = ["git", "fetch", "--all-remotes"]
+d = ["diff", "--git"]
+mm = ["bookmark", "move", "--to", "@", "master"]
+
+# [revset-aliases]
+# 'trunk()' = 'master@ssp'
+
+[git]
+write-change-id-header = true
