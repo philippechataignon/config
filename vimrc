@@ -97,3 +97,6 @@ imap <Nul> <C-k>NS
 " cache les buffers au lieu de les fermer
 set hidden
 set cm=blowfish2
+
+" ne revient pas au début quand recherche
+set nowrapscan
