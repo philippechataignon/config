@@ -1,4 +1,4 @@
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 # auto_cd : si non cmd -> cd
