@@ -1,5 +1,5 @@
 [ui]
-default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"], "-s"
 editor = "vim"
 # diff.format = "git"
 ui.conflict-marker-style = "snapshot"
