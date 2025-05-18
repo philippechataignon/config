@@ -19,7 +19,11 @@ setopt prompt_subst
 bindkey -e
 autoload -Uz compinit
 compinit
-source <(jj util completion zsh)
+if [ -x bin/jj ]
+then
+    source <(bin/jj util completion zsh)
+fi
+
 autoload -U colors
 colors
 autoload -Uz vcs_info
@@ -59,3 +63,5 @@ bindkey '^[[3~' delete-char-or-list
 if [[ -r ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
+
+. "$HOME/.local/bin/env"
