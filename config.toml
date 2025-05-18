@@ -1,7 +1,7 @@
 [ui]
-+default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"], "-s"
+default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"], "-s"
 editor = "vim"
-# diff.format = "git"
+diff.format = "git"
 ui.conflict-marker-style = "snapshot"
 
 [user]
@@ -14,10 +14,9 @@ l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk
 la = ["log", "-r", "::"]
 f = ["git", "fetch", "--all-remotes"]
 d = ["diff", "--git"]
-mm = ["bookmark", "move", "--to", "@", "master"]
 mmp = ["bookmark", "move", "--to", "@-", "master"]
-push = ["git", "push", "-r", "@"]
 pushp = ["git", "push", "-r", "@-"]
+push = ["git", "push"]
 
 [git]
 write-change-id-header = true
