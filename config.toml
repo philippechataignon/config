@@ -18,6 +18,7 @@ f = ["git", "fetch", "--all-remotes"]
 d = ["diff", "--git"]
 mm = ["bookmark", "move", "--to", "@-", "master"]
 push = ["git", "push", "-r", "@-"]
+abend = ["abandon"]
 
 [git]
 write-change-id-header = true
