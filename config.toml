@@ -4,7 +4,7 @@
 default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 editor = "vim"
 diff.format = "git"
-ui.conflict-marker-style = "snapshot"
+conflict-marker-style = "snapshot"
 
 [user]
 name = "Philippe Chataignon"
