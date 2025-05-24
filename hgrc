@@ -1,8 +1,3 @@
 [ui]
-username=philippe
-verbose=True
-
-[web]
-cacerts = /etc/ssl/certs/chataignon_ca.crt
-
-[extensions]
+username=Philippe Chataignon <philippe.chataignon@gmail.com>
+# verbose=True
