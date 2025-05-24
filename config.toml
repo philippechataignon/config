@@ -1,7 +1,7 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
 [ui]
-default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"], "-s"
+default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 editor = "vim"
 diff.format = "git"
 ui.conflict-marker-style = "snapshot"
