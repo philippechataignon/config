@@ -16,9 +16,8 @@ l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk
 la = ["log", "-r", "::"]
 f = ["git", "fetch", "--all-remotes"]
 d = ["diff", "--git"]
-mmp = ["bookmark", "move", "--to", "@-", "master"]
-pushp = ["git", "push", "-r", "@-"]
-push = ["git", "push"]
+mm = ["bookmark", "move", "--to", "@-", "master"]
+push = ["git", "push", "-r", "@-"]
 
 [git]
 write-change-id-header = true
