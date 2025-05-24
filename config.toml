@@ -28,4 +28,3 @@ write-change-id-header = true
 
 # [revset-aliases]
 # "trunk()" = "master@origin"
-

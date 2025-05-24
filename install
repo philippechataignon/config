@@ -7,4 +7,4 @@ cp  -i zshlocal  ~/.zshlocal
 cp  -i zlogin  ~/.zlogin
 cp  -i psqlrc    ~/.psqlrc
 mkdir -p ~/.config/jj
-ln config.toml ~/.config/jj
+ln -s $PWD/config.toml ~/.config/jj
