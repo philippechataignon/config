@@ -24,3 +24,7 @@ write-change-id-header = true
 
 [colors]
 "diff token" = {underline = false }
+
+# [revset-aliases]
+# "trunk()" = "master@origin"
+
