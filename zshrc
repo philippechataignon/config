@@ -63,5 +63,3 @@ bindkey '^[[3~' delete-char-or-list
 if [[ -r ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
-
-. "$HOME/.local/bin/env"
