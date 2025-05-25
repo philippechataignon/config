@@ -8,3 +8,5 @@ cp  -i zlogin  ~/.zlogin
 cp  -i psqlrc    ~/.psqlrc
 mkdir -p ~/.config/jj
 ln -s $PWD/jj.toml ~/.config/jj/config.toml
+mkdir -p ~/.config/helix
+ln -s $PWD/helix.toml ~/.config/helix/config.toml
