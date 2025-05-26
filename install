@@ -5,7 +5,6 @@ ln -sf $PWD/tmux.conf ~/.tmux.conf
 ln -sf $PWD/vimrc     ~/.vimrc
 cp  -i zshlocal  ~/.zshlocal
 cp  -i zlogin  ~/.zlogin
-mkdir -p ~/.config/jj
-ln -s $PWD/jj.toml ~/.config/jj/config.toml
-mkdir -p ~/.config/helix
-ln -s $PWD/helix.toml ~/.config/helix/config.toml
+cp  -i jjconfig.toml ~/.jjconfig.toml
+# mkdir -p ~/.config/helix
+# ln -s $PWD/helix.toml ~/.config/helix/config.toml
