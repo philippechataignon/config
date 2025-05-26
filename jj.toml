@@ -12,14 +12,18 @@ name = "Philippe Chataignon"
 email = "philippe.chataignon@gmail.com"
 
 [aliases]
-e = ["edit"]
-l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
-la = ["log", "-r", "::"]
-f = ["git", "fetch", "--all-remotes"]
-d = ["diff", "--git"]
-mm = ["bookmark", "move", "--to", "@-", "master"]
-push = ["git", "push", "-r", "@-"]
 abend = ["abandon"]
+bd = ["bookmark", "delete"]
+d = ["diff", "--git"]
+e = ["edit"]
+f = ["git", "fetch", "--all-remotes"]
+la = ["log", "-r", "::"]
+l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+mm = ["bookmark", "move", "--to", "@-", "master"]
+pa = ["git", "push", "--all", "--deleted"]
+pc = ["git", "push", "-c", "@-"]
+pd = ["git", "push", "--deleted"]
+push = ["git", "push", "-r", "@-"]
 
 [git]
 write-change-id-header = true
