@@ -22,8 +22,7 @@ l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk
 mm = ["bookmark", "move", "--to", "@-", "master"]
 pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
-pd = ["git", "push", "--deleted"]
-push = ["git", "push", "-r", "@-"]
+pp = ["git", "push", "-r", "@-"]
 
 [git]
 write-change-id-header = true
