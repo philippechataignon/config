@@ -24,6 +24,7 @@ pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
 pp = ["git", "push", "-r", "@-"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
+gettrunk = ["config", "get", "revset-aliases.'trunk()'"]
 
 [git]
 write-change-id-header = true
