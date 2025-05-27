@@ -24,6 +24,7 @@ mm = ["bookmark", "move", "--to", "@-", "master"]
 pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
 pp = ["git", "push", "-r", "@-"]
+push = ["git", "push", "--tracked", "--deleted"]
 setpush = ["config", "set", "--repo", "git.push"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 
