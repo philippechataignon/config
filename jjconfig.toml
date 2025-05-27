@@ -1,7 +1,7 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
 [ui]
-default-command = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
+default-command = ["log"]
 editor = "vim"
 diff.format = "git"
 conflict-marker-style = "snapshot"
@@ -21,6 +21,7 @@ f = ["git", "fetch", "--all-remotes"]
 gettrunk = ["config", "get", "revset-aliases.'trunk()'"]
 la = ["log", "-r", "::"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
+lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 mm = ["bookmark", "move", "--to", "@-", "master"]
 pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]

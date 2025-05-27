@@ -59,7 +59,12 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[3~' delete-char-or-list
 
+# ajoute ~/bin au PATH
+export PATH=$HOME/bin:$PATH
+
 # paramètres locaux
-if [[ -r ~/.zshlocal ]]; then
+if [[ -r ~/.zshlocal ]]
+then
     source ~/.zshlocal
 fi
+
