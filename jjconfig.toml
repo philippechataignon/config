@@ -23,12 +23,10 @@ mm = ["bookmark", "move", "--to", "@-", "master"]
 pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
 pp = ["git", "push", "-r", "@-"]
+settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 
 [git]
 write-change-id-header = true
 
 [colors]
 "diff token" = {underline = false }
-
-# [revset-aliases]
-# "trunk()" = "master@origin"
