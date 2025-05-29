@@ -1,0 +1,7 @@
+#!/bin/sh
+cp ~/.gitconfig     $PWD/gitconfig
+cp ~/.zshrc         $PWD/zshrc
+cp ~/.tmux.conf     $PWD/tmux.conf
+cp ~/.vimrc         $PWD/vimrc
+cp ~/.zlogin        $PWD/zlogin
+cp ~/.jjconfig.toml $PWD/jjconfig.toml
