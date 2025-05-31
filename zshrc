@@ -67,4 +67,3 @@ if [[ -r ~/.zshlocal ]]
 then
     source ~/.zshlocal
 fi
-
