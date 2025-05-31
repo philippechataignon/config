@@ -27,7 +27,7 @@ fi
 autoload -U colors
 colors
 
-source ~/src/zsh-jj/zsh-jj.plugin.zsh
+source ~/bin/zsh-jj/zsh-jj.plugin.zsh
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable jj git
 
