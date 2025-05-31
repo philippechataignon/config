@@ -37,3 +37,6 @@ write-change-id-header = true
 
 [colors]
 "diff token" = {underline = false }
+
+[template-aliases]
+"format_short_id(id)" = "id.shortest(12)"
