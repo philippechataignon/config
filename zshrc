@@ -26,13 +26,14 @@ fi
 
 autoload -U colors
 colors
+
+source ~/src/zsh-jj/zsh-jj.plugin.zsh
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' enable jj git
 
 cn="%{$reset_color%}"               # normal color
 cg="%{$fg[green]%}"                 # green
 cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
-PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
 
 case $TERM in
     linux | rxvt-unicode | xterm* | screen | rxvt-unicode-256color)
@@ -44,10 +45,12 @@ case $TERM in
 esac
 zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
 zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
-# zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' check-for-changes true
 # zstyle ':vcs_info:*' stagedstr   "+"
 # zstyle ':vcs_info:*' unstagedstr "*"
-RPROMPT='${vcs_info_msg_0_}'
+PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
+PROMPT+="\$vcs_info_msg_0_ "
+# RPROMPT='${vcs_info_msg_0_}'
 
 # alias
 alias -g L="| less"
