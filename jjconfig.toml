@@ -25,6 +25,7 @@ la = ["log", "-r", "::"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 mm = ["bookmark", "move", "--to", "@-", "master"]
+mlb = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
 pp = ["git", "push", "-r", "@-"]
@@ -41,3 +42,5 @@ write-change-id-header = true
 [template-aliases]
 "format_short_id(id)" = "id.shortest()"
 
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
