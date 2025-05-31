@@ -39,4 +39,5 @@ write-change-id-header = true
 "diff token" = {underline = false }
 
 [template-aliases]
-"format_short_id(id)" = "id.shortest(12)"
+"format_short_id(id)" = "id.shortest()"
+
