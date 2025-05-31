@@ -14,6 +14,7 @@ email = "philippe.chataignon@gmail.com"
 [aliases]
 abend = ["abandon"]
 bd = ["bookmark", "delete"]
+bs = ["bookmark", "set", "-r", "@-"]
 blt = ["bookmark", "list", "--tracked"]
 d = ["diff", "--git"]
 del = ["abandon", "--restore-descendants"]
