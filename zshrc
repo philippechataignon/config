@@ -19,17 +19,28 @@ setopt prompt_subst
 bindkey -e
 autoload -Uz compinit
 compinit
-if [ -x bin/jj ]
-then
-    source <(bin/jj util completion zsh)
-fi
-
 autoload -U colors
 colors
 
-source ~/bin/zsh-jj/zsh-jj.plugin.zsh
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable jj git
+zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
+zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
+zstyle ':vcs_info:*' check-for-changes true
+if [ -x bin/jj ]
+then
+    source <(bin/jj util completion zsh)
+    source ~/bin/zsh-jj/zsh-jj.plugin.zsh
+    PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
+    PROMPT+="\$vcs_info_msg_0_ "
+    zstyle ':vcs_info:*' enable jj git
+else
+    zstyle ':vcs_info:*' stagedstr   "+"
+    zstyle ':vcs_info:*' unstagedstr "*"
+    PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
+    RPROMPT='${vcs_info_msg_0_}'
+    zstyle ':vcs_info:*' enable git
+fi
+
 
 cn="%{$reset_color%}"               # normal color
 cg="%{$fg[green]%}"                 # green
@@ -43,14 +54,6 @@ case $TERM in
         }
         ;;
 esac
-zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
-zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
-zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:*' stagedstr   "+"
-# zstyle ':vcs_info:*' unstagedstr "*"
-PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
-PROMPT+="\$vcs_info_msg_0_ "
-# RPROMPT='${vcs_info_msg_0_}'
 
 # alias
 alias -g L="| less"
@@ -70,4 +73,3 @@ if [[ -r ~/.zshlocal ]]
 then
     source ~/.zshlocal
 fi
-
