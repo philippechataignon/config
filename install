@@ -5,4 +5,5 @@ cp $PWD/tmux.conf       ~/.tmux.conf
 cp $PWD/vimrc           ~/.vimrc
 cp $PWD/zlogin          ~/.zlogin
 cp $PWD/jjconfig.toml   ~/.jjconfig.toml
+mkdir -p ~/bin
 cp -r $PWD/zsh-jj       ~/bin
