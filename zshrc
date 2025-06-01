@@ -21,6 +21,9 @@ autoload -Uz compinit
 compinit
 autoload -U colors
 colors
+cn="%{$reset_color%}"               # normal color
+cg="%{$fg[green]%}"                 # green
+cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
@@ -41,10 +44,6 @@ else
     zstyle ':vcs_info:*' enable git
 fi
 
-
-cn="%{$reset_color%}"               # normal color
-cg="%{$fg[green]%}"                 # green
-cb="%{%(#~$fg[red]~$fg[blue])%}"    # red if root, else blue
 
 case $TERM in
     linux | rxvt-unicode | xterm* | screen | rxvt-unicode-256color)
