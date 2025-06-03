@@ -14,7 +14,8 @@ eval `${vcs_comm[cmd]} log --ignore-working-copy -n 1 --no-graph --color never \
     )
   '`
 
-eval `${vcs_comm[cmd]} log --ignore-working-copy -n 1 --no-graph --color never -r "@" \
+eval `${vcs_comm[cmd]} log --ignore-working-copy -n 1 --no-graph --color never \
+  -r "@" \
   -T '
     separate(" ",
       "revision=\"" ++ change_id.shortest() ++ "\"",
