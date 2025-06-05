@@ -3,9 +3,9 @@
 [ui]
 default-command = ["log"]
 editor = "vim"
-diff.format = "git"
 conflict-marker-style = "snapshot"
 paginate = "never"
+diff-formatter = ":git"
 
 [user]
 name = "Philippe Chataignon"
