@@ -1,4 +1,5 @@
 #!/bin/sh
+jj new -m "Sync config"
 cp ~/.gitconfig     $PWD/gitconfig
 cp ~/.zshrc         $PWD/zshrc
 cp ~/.tmux.conf     $PWD/tmux.conf
