@@ -1,7 +1,7 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
 [ui]
-default-command = ["util", "exec", "--", "sh", "-c", "jj st && jj l"]
+default-command = ["util", "exec", "--", "sh", "-c", "jj st && jj log -T builtin_log_oneline"]
 editor = "vim"
 conflict-marker-style = "snapshot"
 paginate = "never"
