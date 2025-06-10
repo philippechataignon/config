@@ -30,6 +30,7 @@ l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 lm = ["log", "-r", "master::@"]
 m = ["describe"]
+msg = ["describe", "-m"]
 mm = ["bookmark", "move", "--to", "@-", "master"]
 mlb = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 pa = ["git", "push", "--all", "--deleted"]
