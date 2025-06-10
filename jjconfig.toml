@@ -12,7 +12,7 @@ name = "Philippe Chataignon"
 email = "philippe.chataignon@gmail.com"
 
 [aliases]
-abend = ["abandon"]
+ab = ["abandon"]
 bd = ["bookmark", "delete"]
 bs = ["bookmark", "set"]
 bl = ["log", "-r", "bookmarks()", "--no-graph", "-T", 'bookmarks ++ "\n"']
