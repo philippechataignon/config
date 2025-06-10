@@ -38,6 +38,7 @@ settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 
 [git]
 write-change-id-header = true
+auto-local-bookmark = true
 
 [colors]
 "diff token" = {underline = false }
