@@ -37,6 +37,7 @@ pa = ["git", "push", "--all", "--deleted"]
 pc = ["git", "push", "-c", "@-"]
 pp = ["git", "push", "--tracked", "--deleted"]
 push = ["git", "push"]
+rl = ["git", "remote", "list"]
 setpush = ["config", "set", "--repo", "git.push"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 
