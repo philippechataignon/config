@@ -1,5 +1,4 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
-
 [ui]
 default-command = ["util", "exec", "--", "sh", "-c", "jj st && jj log -T builtin_log_oneline"]
 editor = "vim"
@@ -49,7 +48,7 @@ auto-local-bookmark = true
 "diff token" = {underline = false }
 
 [template-aliases]
-"format_short_id(id)" = "id.shortest()"
+"format_short_id(id)" = "id.shortest(4)"
 
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
