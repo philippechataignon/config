@@ -1,0 +1,6 @@
+#!/bin/sh
+for r in $(jj git remote list | cut -f1 -d' ') 
+do 
+    echo Cmd: jj pp --remote=$r
+    jj pp --remote=$r
+done
