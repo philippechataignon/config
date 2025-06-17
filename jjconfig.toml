@@ -37,6 +37,7 @@ push = ["git", "push"]
 rl = ["git", "remote", "list"]
 setpush = ["config", "set", "--repo", "git.push"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
+sq = ["squash"]
 
 [git]
 write-change-id-header = true
