@@ -1,5 +1,4 @@
 #!/bin/sh
-jj status
 cp ~/.gitconfig     $PWD/gitconfig
 cp ~/.zshrc         $PWD/zshrc
 cp ~/.tmux.conf     $PWD/tmux.conf
