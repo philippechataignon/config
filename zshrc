@@ -29,12 +29,12 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats "${cs}%u%c ${cg}[%b] ${cn}(%s)"
 zstyle ':vcs_info:*' actionformats "${cs}%u%c ${cg}[%b]${cs} %a ${cn}(%s)"
 zstyle ':vcs_info:*' check-for-changes true
-if [ -x bin/jj ]
+if [ -x ~/bin/jj ]
 then
-    source <(bin/jj util completion zsh)
+    source <(~/bin/jj util completion zsh)
     source ~/bin/zsh-jj/zsh-jj.plugin.zsh
-    PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}%# "
-    PROMPT+="\$vcs_info_msg_0_ "
+    NL=$'\n'
+    PROMPT="${cg}[%*] ${cb}%n${cn}@${cb}%m:${cg}%~${cn}\$vcs_info_msg_0_${NL}%# "
     zstyle ':vcs_info:*' enable jj git
 else
     zstyle ':vcs_info:*' stagedstr   "+"
