@@ -1,9 +1,10 @@
 #!/bin/sh
-cp $PWD/gitconfig       ~/.gitconfig
-cp $PWD/zshrc           ~/.zshrc
-cp $PWD/tmux.conf       ~/.tmux.conf
-cp $PWD/vimrc           ~/.vimrc
-cp $PWD/zlogin          ~/.zlogin
-cp $PWD/jjconfig.toml   ~/.jjconfig.toml
+cp gitconfig        ~/.gitconfig
+cp zshrc            ~/.zshrc
+cp tmux.conf        ~/.tmux.conf
+cp vimrc            ~/.vimrc
+cp zlogin           ~/.zlogin
+cp jjconfig.toml    ~/.jjconfig.toml
 mkdir -p ~/bin
-cp -r $PWD/zsh-jj       ~/bin
+cp -r $PWD/zsh-jj   ~/bin
+cp jjpa jjpp        ~/bin
