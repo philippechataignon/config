@@ -12,7 +12,9 @@ email = "philippe.chataignon@gmail.com"
 
 [aliases]
 ab = ["abandon"]
+abs = ["absorb"]
 bd = ["bookmark", "delete"]
+bdp = ["bookmark", "delete", "glob:push-*"]
 bs = ["bookmark", "set"]
 bsc = ["bookmark", "set", "-r", "@"]
 bsf = ["bookmark", "set", "--allow-backwards"]
@@ -41,6 +43,7 @@ rl = ["git", "remote", "list"]
 setpush = ["config", "set", "--repo", "git.push"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 sq = ["squash"]
+sqf = ["squash", "--ignore-immutable"]
 
 [git]
 write-change-id-header = true
