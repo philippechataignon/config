@@ -100,3 +100,8 @@ set cm=blowfish2
 
 " ne revient pas au début quand recherche
 set nowrapscan
+
+try
+    source ~/.vimlocal
+catch /^Vim\%((\a\+)\)\=:E484:/ " catch error E484
+endtry
