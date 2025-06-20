@@ -8,3 +8,4 @@ cp jjconfig.toml    ~/.jjconfig.toml
 mkdir -p ~/bin
 cp -r $PWD/zsh-jj   ~/bin
 cp jjpa jjpp        ~/bin
+chmod +x ~/bin/jjpa ~/bin/jjpp
