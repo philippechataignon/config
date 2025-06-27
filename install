@@ -9,3 +9,5 @@ mkdir -p ~/bin
 cp -r $PWD/zsh-jj   ~/bin
 cp jjpa jjpp        ~/bin
 chmod +x ~/bin/jjpa ~/bin/jjpp
+mkdir -p ~/.config/helix
+cp helix.toml ~/.config/helix/config.toml
