@@ -1,9 +1,10 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 [ui]
-default-command = ["util", "exec", "--", "sh", "-c", """jj st && jj lp"""]
+default-command = ["util", "exec", "--", "sh", "-c", """jj st --no-pager && jj lp --no-pager"""]
 editor = "vim"
 conflict-marker-style = "git"
 diff-formatter = ":git"
+pager = "less -r -X"
 
 # paginate = "never"
 # diff-formatter = ["meld", "$left", "$right"]
