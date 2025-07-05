@@ -67,5 +67,15 @@ bookmarks = "red"
 "format_short_id(id)" = "id.shortest(4)"
 'format_short_signature(signature)' = 'signature.name()'
 
+[revsets]
+# fix = "reachable(@, mutable())"
+# simplify-parents = "reachable(@, mutable())"
+# 'builtin_immutable_heads()' = 'present(trunk()) | tags() | untracked_remote_bookmarks()'
+# 'immutable_heads()' = 'builtin_immutable_heads()'
+# 'immutable()' = '::(immutable_heads() | root())'
+# 'mutable()' = '~immutable()'
+# log = "present(@) | ancestors(immutable_heads().., 2) | present(trunk())"
+log = "present(@) | ancestors(immutable_heads().., 2) | present(trunk()) | bookmarks()"
+
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
