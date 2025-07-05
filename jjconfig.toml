@@ -39,7 +39,8 @@ ll = ["log", "-r", "::", "-n", "10"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 lm = ["log", "-r", "master::@"]
-lp = ["log", "-T", 'separate(" ", change_id.shortest(4), commit_id.shortest(4),  bookmarks, if(empty, label("empty", "(empty)")), description.first_line(), "(" ++ commit_timestamp(self).ago() ++ ")")']
+lp = ["log", "-T", "log_phc1"] 
+lpt = ["lp", "-r", "tracked_remote_bookmarks():: | bookmarks()"]
 msg = ["describe", "-m"]
 mm = ["bookmark", "set", "master", "-r", "@-"]
 mlb = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
@@ -64,6 +65,21 @@ auto-local-bookmark = true
 bookmarks = "red"
 
 [template-aliases]
+        # label(if(empty, "empty"), description_placeholder),
+log_phc1 = '''
+separate(" ", 
+    change_id.shortest(4), 
+    commit_id.shortest(4),  
+    bookmarks, 
+    if(empty, label("empty", "(empty)")), 
+    if(description,
+        description.first_line(),
+        description_placeholder,
+    ),
+    "(" ++ commit_timestamp(self).ago() ++ ")"
+)
+'''
+
 "format_short_id(id)" = "id.shortest(4)"
 'format_short_signature(signature)' = 'signature.name()'
 
