@@ -19,7 +19,7 @@ email = "philippe.chataignon@gmail.com"
 ab = ["abandon"]
 abs = ["absorb"]
 bd = ["bookmark", "delete"]
-bdp = ["bookmark", "delete", "glob:push-*"]
+bdt = ["bookmark", "delete", "glob:temp_*"]
 bs = ["bookmark", "set"]
 bsc = ["bookmark", "set", "-r", "@"]
 bsf = ["bookmark", "set", "--allow-backwards"]
@@ -84,6 +84,9 @@ separate(" ",
 
 "format_short_id(id)" = "id.shortest(4)"
 'format_short_signature(signature)' = 'signature.name()'
+
+[templates]
+git_push_bookmark = '"temp_" ++ change_id.shortest(4)'
 
 [revsets]
 # fix = "reachable(@, mutable())"
