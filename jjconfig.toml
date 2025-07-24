@@ -5,6 +5,7 @@ editor = "vim"
 conflict-marker-style = "git"
 diff-formatter = ":git"
 pager = "less -r -X"
+diff-editor = ":builtin"
 
 # paginate = "never"
 # diff-formatter = ["meld", "$left", "$right"]
