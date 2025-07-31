@@ -20,6 +20,11 @@ setopt append_history extended_history histignorespace
 bindkey -e
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ".zshcompletioncache"
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*' menu select
+
 
 setopt prompt_subst
 autoload -U colors
