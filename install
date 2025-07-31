@@ -1,12 +1,13 @@
 #!/bin/sh
 cp gitconfig        ~/.gitconfig
-cp zshrc            ~/.zshrc
+cp jjconfig.toml    ~/.jjconfig.toml
 cp tmux.conf        ~/.tmux.conf
 cp vimrc            ~/.vimrc
+cp zshenv           ~/.zshenv
+cp zshrc            ~/.zshrc
 cp zlogin           ~/.zlogin
-cp jjconfig.toml    ~/.jjconfig.toml
 mkdir -p ~/bin
-cp -r $PWD/zsh-jj   ~/bin
+cp -r zsh-jj        ~/bin
 cp jjpa jjpp        ~/bin
 chmod +x ~/bin/jjpa ~/bin/jjpp
 mkdir -p ~/.config/helix

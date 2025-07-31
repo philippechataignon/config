@@ -1,7 +1,8 @@
 #!/bin/sh
-cp ~/.gitconfig     $PWD/gitconfig
-cp ~/.zshrc         $PWD/zshrc
-cp ~/.tmux.conf     $PWD/tmux.conf
-cp ~/.vimrc         $PWD/vimrc
-cp ~/.zlogin        $PWD/zlogin
-cp ~/.jjconfig.toml $PWD/jjconfig.toml
+cp ~/.gitconfig     gitconfig
+cp ~/.jjconfig.toml jjconfig.toml
+cp ~/.tmux.conf     tmux.conf
+cp ~/.vimrc         vimrc
+cp ~/.zshenv        zshenv
+cp ~/.zlogin        zlogin
+cp ~/.zshrc         zshrc
