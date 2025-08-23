@@ -8,7 +8,10 @@ cp zshrc            ~/.zshrc
 cp zlogin           ~/.zlogin
 mkdir -p ~/bin
 cp -r zsh-jj        ~/bin
-cp jjpa jjpp        ~/bin
-chmod +x ~/bin/jjpa ~/bin/jjpp
+for f in jjpa jjpp jjf
+do
+    cp $f ~/bin
+    chmod +x ~/bin/$f
+done
 mkdir -p ~/.config/helix
 cp helix.toml ~/.config/helix/config.toml
