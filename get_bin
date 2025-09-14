@@ -1,0 +1,2 @@
+#!/bin/sh
+mc mirror --overwrite $S3/data_save/bin ~/bin
