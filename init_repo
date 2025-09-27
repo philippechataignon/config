@@ -1,0 +1,24 @@
+#!/bin/bash
+input=($@)
+repo=${input[0]}
+
+unset input[0]
+remotes=(${input[@]})
+
+declare -A url
+url[insee]=https://gitlab.insee.fr/vgkwl1
+url[ssp]=https://git.lab.sspcloud.fr/vgkwl1
+url[gh]=https://github.com/philippechataignon
+
+remote=${remotes[0]}
+jj git clone --colocate --remote=$remote ${url[$remote]}/${repo}.git
+jj -R $repo setpush $remote
+
+others=(${remotes[@]})
+unset others[0]
+for other in ${others[@]}
+do
+    git -C $repo config --add remote.$remote.fetch "+refs/$other/*:refs/tags/$other/*"
+done
+git -C $repo up
+jj git import
