@@ -18,14 +18,15 @@ email = "philippe.chataignon@gmail.com"
 
 [aliases]
 ab = ["abandon"]
+abf = ["abandon", "--ignore-immutable"]
 abs = ["absorb"]
 bd = ["bookmark", "delete"]
 bdt = ["bookmark", "delete", "glob:temp_*"]
 bs = ["bookmark", "set"]
 bsc = ["bookmark", "set", "-r", "@"]
 bsf = ["bookmark", "set", "--allow-backwards"]
-bl = ["log", "-r", "bookmarks()", "--no-graph", "-T", 'bookmarks ++ "\n"']
-bla = ["bookmark", "list", "--all"]
+# bl = ["log", "-r", "bookmarks()", "--no-graph", "-T", 'bookmarks ++ "\n"']
+bl = ["bookmark", "list", "--all"]
 blt = ["bookmark", "list", "--tracked"]
 bt = ["bookmark", "track"]
 ci = ["commit"]
@@ -39,10 +40,10 @@ f = ["git", "fetch", "--all-remotes"]
 fm = ["git", "fetch", "--all-remotes", "--branch", "master"]
 getpush = ["config", "get", "git.push"]
 gettrunk = ["config", "get", "revset-aliases.'trunk()'"]
-la = ["log", "-r", "::"]
-ll = ["log", "-r", "::", "-n", "10"]
+la = ["log", "-r", "::", "-T", "builtin_log_oneline"]
+ll = ["log", "-r", "::", "-n", "16"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
-lb = ["lp", "-r", "remote_bookmarks():: | bookmarks()::"]
+lb = ["log", "-r", "remote_bookmarks():: | bookmarks():: | tags()::"]
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
 lm = ["log", "-r", "master::@"]
 lp = ["log", "-T", "log_phc1"] 
@@ -59,6 +60,7 @@ rbc = ["rebase", "-r", "@"]
 rbf = ["rebase", "--ignore-immutable"]
 rbm = ["rebase", "-d", "master"]
 rl = ["git", "remote", "list"]
+tl = ["tag", "list"]
 setpush = ["config", "set", "--repo", "git.push"]
 settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 sq = ["squash"]
@@ -73,12 +75,12 @@ write-change-id-header = true
 bookmarks = "red"
 
 [template-aliases]
-        # label(if(empty, "empty"), description_placeholder),
 log_phc1 = '''
 separate(" ", 
     change_id.shortest(4), 
     commit_id.shortest(4),  
     bookmarks, 
+    tags,
     if(empty, label("empty", "(empty)")), 
     if(description,
         description.first_line(),
