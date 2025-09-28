@@ -1,0 +1,2 @@
+#!/bin/sh
+jj log -r change_id\($1\)
