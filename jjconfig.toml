@@ -25,7 +25,6 @@ bdt = ["bookmark", "delete", "glob:temp_*"]
 bs = ["bookmark", "set"]
 bsc = ["bookmark", "set", "-r", "@"]
 bsf = ["bookmark", "set", "--allow-backwards"]
-# bl = ["log", "-r", "bookmarks()", "--no-graph", "-T", 'bookmarks ++ "\n"']
 bl = ["bookmark", "list", "--all"]
 blt = ["bookmark", "list", "--tracked"]
 bt = ["bookmark", "track"]
@@ -68,7 +67,7 @@ sqf = ["squash", "--ignore-immutable"]
 
 [git]
 write-change-id-header = true
-# auto-local-bookmark = true
+auto-local-bookmark = true
 
 [colors]
 "diff token" = {underline = false }
