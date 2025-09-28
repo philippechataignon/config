@@ -3,7 +3,6 @@ cp gitconfig        ~/.gitconfig
 cp jjconfig.toml    ~/.jjconfig.toml
 cp tmux.conf        ~/.tmux.conf
 cp vimrc            ~/.vimrc
-cp zshenv           ~/.zshenv
 cp zshrc            ~/.zshrc
 cp zlogin           ~/.zlogin
 mkdir -p ~/bin
