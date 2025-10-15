@@ -16,12 +16,13 @@ SAVEHIST=5000
 
 setopt auto_cd auto_pushd correct check_jobs notify
 setopt append_history extended_history histignorespace
+setopt menu_complete 
 
 bindkey -e
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ".zshcompletioncache"
+zstyle ':completion:*' cache-path "~/.zshcompletioncache"
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' menu select
 
