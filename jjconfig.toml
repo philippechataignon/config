@@ -1,6 +1,6 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 [ui]
-default-command = ["util", "exec", "--", "sh", "-c", """jj st --no-pager && jj lp --no-pager"""]
+default-command = ["util", "exec", "--", "sh", "-c", """jj st --no-pager && jj lg --no-pager"""]
 editor = "vim"
 conflict-marker-style = "git"
 diff-formatter = ":git"
@@ -44,8 +44,8 @@ ll = ["log", "-r", "::", "-n", "16"]
 l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
 lb = ["log", "-r", "remote_bookmarks():: | bookmarks():: | tags()::"]
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
+lg = ["log", "-T", "log_phc1"] 
 lm = ["log", "-r", "master::@"]
-lp = ["log", "-T", "log_phc1"] 
 msg = ["describe", "-m"]
 mm = ["bookmark", "set", "master", "-r", "@-"]
 mlb = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
