@@ -69,7 +69,10 @@ sqf = ["squash", "--ignore-immutable"]
 
 [git]
 write-change-id-header = true
-auto-local-bookmark = true
+# auto-local-bookmark = true
+
+[remotes.ssp]
+auto-track-bookmarks = 'glob:*'
 
 [colors]
 "diff token" = {underline = false }
