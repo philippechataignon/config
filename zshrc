@@ -16,7 +16,7 @@ SAVEHIST=5000
 
 setopt auto_cd auto_pushd correct check_jobs notify
 setopt append_history extended_history histignorespace
-setopt menu_complete 
+setopt auto_menu
 
 bindkey -e
 autoload -Uz compinit
