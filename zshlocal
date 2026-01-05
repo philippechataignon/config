@@ -42,3 +42,5 @@ bindkey '^[[3~' delete-char-or-list
 # # ajoute ~/bin au PATH
 # export no_proxy=gitlab.insee.fr
 # alias vi=vim
+#
+# source <(jj util completion zsh)
