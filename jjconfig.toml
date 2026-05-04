@@ -1,9 +1,9 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 [ui]
-default-command = ["util", "exec", "--", "sh", "-c", """jj st --no-pager && jj lg --no-pager"""]
+default-command = ["status", "--no-pager"]
 editor = "vim"
-conflict-marker-style = "git"
-diff-formatter = ":git"
+# conflict-marker-style = "git"
+# diff-formatter = ":git"
 pager = "less -r -X"
 diff-editor = ":builtin"
 
@@ -25,11 +25,12 @@ bd = ["bookmark", "delete"]
 bdt = ["bookmark", "delete", "glob:temp_*"]
 bm = ["bookmark", "advance", "--to", "@-"]
 bs = ["bookmark", "set"]
-bsm = ["bookmark", "set", "master", "--allow-backwards"]
+bsm = ["bookmark", "set", "master", "--allow-backwards", "-r"]
 bsf = ["bookmark", "set", "--allow-backwards"]
 bl = ["bookmark", "list", "--all"]
 blt = ["bookmark", "list", "--tracked"]
 bt = ["bookmark", "track"]
+bu = ["bookmark", "untrack"]
 ci = ["commit"]
 clone = ["git", "clone", "--colocate", "--remote"]
 clr = ["abandon", "-r", "empty() & mutable() & ~ merges()"]
@@ -37,24 +38,26 @@ d = ["diff"]
 dg = ["diff", "--git"]
 del = ["abandon", "--restore-descendants"]
 e = ["edit"]
+ef = ["edit", "--ignore-immutable"]
 f = ["git", "fetch", "--remote"]
 fa = ["git", "fetch", "--all-remotes"]
 getpush = ["config", "get", "git.push"]
 gettrunk = ["config", "get", "revset-aliases.'trunk()'"]
 la = ["log", "-r", "::", "-T", "builtin_log_oneline"]
 ll = ["log", "-r", "::", "-n", "16"]
-l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()"]
-lb = ["log", "-r", "remote_bookmarks():: | bookmarks():: | tags()::"]
+l = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 5) | trunk()", "--no-pager"]
+lb = ["log", "-r", "ancestors(remote_bookmarks():: | bookmarks():: | tags()::, 5)"]
 lc = ["log", "-r", "@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()", "-s"]
-lg = ["log", "-T", "log_phc1"] 
+lg = ["log", "-T", "log_phc1"]
 lm = ["log", "-r", "master::@"]
+lt = ["log", "-T", "log_phc1", "-r", "::trunk()"] 
 msg = ["describe", "-m"]
 mm = ["bookmark", "set", "master", "-r", "@-"]
 nm = ["new", "master"]
 pa = ["git", "push", "--all"]
 pc = ["git", "push", "-c"]
-pcc = ["git", "push", "-c", "@"]
 pp = ["git", "push", "--tracked", "--deleted"]
+pv = ["git", "push", "-c", "visible_heads() & ~@ & ~bookmarks()"]
 push = ["git", "push"]
 pushr = ["git", "push", "--remote"]
 sp = ["split"]
@@ -62,6 +65,8 @@ rb = ["rebase"]
 rbc = ["rebase", "-r", "@"]
 rbf = ["rebase", "--ignore-immutable"]
 rbm = ["rebase", "-o", "master"]
+ra = ["git", "remote", "add"]
+rd = ["git", "remote", "remove"]
 rl = ["git", "remote", "list"]
 tl = ["tag", "list"]
 setpush = ["config", "set", "--repo", "git.push"]
@@ -69,20 +74,20 @@ settrunk = ["config", "set", "--repo", "revset-aliases.'trunk()'"]
 sq = ["squash"]
 sqf = ["squash", "--ignore-immutable"]
 
-[remotes.insee]
-auto-track-bookmarks = 'glob:*'
-
-[remotes.ssp]
-auto-track-bookmarks = 'glob:*'
-
-[remotes.gh]
-auto-track-bookmarks = 'glob:*'
-
-[remotes.perso]
-auto-track-bookmarks = 'glob:*'
-
-[remotes.origin]
-auto-track-bookmarks = 'glob:*'
+# [remotes.insee]
+# auto-track-bookmarks = 'glob:*'
+# 
+# [remotes.ssp]
+# auto-track-bookmarks = 'glob:*'
+# 
+# [remotes.gh]
+# auto-track-bookmarks = 'glob:*'
+# 
+# [remotes.perso]
+# auto-track-bookmarks = 'glob:*'
+# 
+# [remotes.origin]
+# auto-track-bookmarks = 'glob:*'
 
 [colors]
 "diff token" = {underline = false }

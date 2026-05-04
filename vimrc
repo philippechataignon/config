@@ -99,7 +99,7 @@ set hidden
 set cm=blowfish2
 
 " ne revient pas au début quand recherche
-set nowrapscan
+" set nowrapscan
 
 try
     source ~/.vimlocal
