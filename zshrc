@@ -46,5 +46,3 @@ if [[ -r ~/.zshlocal ]]
 then
     source ~/.zshlocal
 fi
-
-. "$HOME/.local/bin/env"
