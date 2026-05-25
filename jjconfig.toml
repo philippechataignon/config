@@ -127,3 +127,15 @@ log = "present(@) | ancestors(immutable_heads().., 2) | present(trunk()) | bookm
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'immutable_heads()' = 'present(trunk()) | untracked_remote_bookmarks()'
+
+[remotes.insee]
+fetch-tags = "*"
+
+[remotes.ssp]
+fetch-tags = "*"
+
+[remotes.gl]
+fetch-tags = "*"
+
+[remotes.gh]
+fetch-tags = "*"
