@@ -54,6 +54,14 @@ lt = ["log", "-T", "log_phc1", "-r", "::trunk()"]
 msg = ["describe", "-m"]
 mm = ["bookmark", "set", "master", "-r", "@-"]
 nm = ["new", "master"]
+p = ["util", "exec", "--", "sh", "-c", """
+for r in $(jj git remote list | cut -f1 -d' ') 
+do 
+    cmd="jj pp --remote=$r"
+    echo Cmd: $cmd
+    $cmd
+done
+""", ""]
 pa = ["git", "push", "--all"]
 pc = ["git", "push", "-c"]
 pp = ["git", "push", "--tracked", "--deleted"]
