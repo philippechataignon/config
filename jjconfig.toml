@@ -62,6 +62,10 @@ do
     $cmd
 done
 """, ""]
+pm = ["util", "exec", "--", "sh", "-c", """
+jj bm
+jj p
+""", ""]
 pa = ["git", "push", "--all"]
 pc = ["git", "push", "-c"]
 pp = ["git", "push", "--tracked", "--deleted"]
