@@ -141,12 +141,20 @@ log = "present(@) | ancestors(immutable_heads().., 2) | present(trunk()) | bookm
 
 [remotes.insee]
 fetch-tags = "*"
+auto-track-bookmarks = "master"
 
 [remotes.ssp]
 fetch-tags = "*"
+auto-track-bookmarks = "master"
 
 [remotes.gl]
 fetch-tags = "*"
+auto-track-bookmarks = "master"
 
 [remotes.gh]
 fetch-tags = "*"
+auto-track-bookmarks = "master"
+
+[remotes.origin]
+fetch-tags = "*"
+auto-track-bookmarks = "master"
