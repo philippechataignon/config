@@ -2,8 +2,8 @@
 [ui]
 default-command = ["status", "--no-pager"]
 editor = "vim"
-# conflict-marker-style = "git"
-# diff-formatter = ":git"
+conflict-marker-style = "git"
+diff-formatter = ":git"
 pager = "less -r -X"
 diff-editor = ":builtin"
 
