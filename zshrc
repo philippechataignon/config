@@ -41,6 +41,18 @@ alias -g L="| less"
 alias -g H="| head"
 alias -g T="| tail"
 
+# apt install zsh-syntax-highlighting
+if [[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]
+then 
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# apt install zsh-autosuggestions
+if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
+then 
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 # paramètres locaux
 if [[ -r ~/.zshlocal ]]
 then
