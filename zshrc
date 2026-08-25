@@ -47,11 +47,22 @@ then
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+if [[ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]
+then 
+    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
 # apt install zsh-autosuggestions
 if [[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
 then 
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+if [[ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]
+then 
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 
 # paramètres locaux
 if [[ -r ~/.zshlocal ]]
