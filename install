@@ -5,9 +5,3 @@ cp tmux.conf        ~/.tmux.conf
 cp vimrc            ~/.vimrc
 cp zshrc            ~/.zshrc
 cp zlogin           ~/.zlogin
-mkdir -p ~/bin
-cp -r zsh-jj        ~/bin
-cp bin/* ~/bin
-chmod +x ~/bin/$f
-mkdir -p ~/.config/helix
-cp helix.toml ~/.config/helix/config.toml

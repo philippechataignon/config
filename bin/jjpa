@@ -1,7 +1,0 @@
-#!/bin/sh
-for r in $(jj git remote list | cut -f1 -d' ') 
-do 
-    cmd="jj pa --remote=$r"
-    echo Cmd: $cmd
-    $cmd
-done
