@@ -22,7 +22,7 @@ bindkey -e
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "~/.zshcompletioncache"
+zstyle ':completion:*' cache-path "$HOME/zshcompletioncache"
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' menu select
 
