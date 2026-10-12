@@ -1,7 +1,9 @@
 # code d'une touche par bindkey crtl+v
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
-bindkey '^[[3~' delete-char-or-list
+# bindkey '^[[H' beginning-of-line      # Touche Origine / Home
+# bindkey '^[[F' end-of-line            # Touche Fin / End
+# bindkey '^[[3~' delete-char           # Touche Suppr / Delete
+# bindkey '^[[1;5C' forward-word        # Ctrl + Flèche droite
+# bindkey '^[[1;5D' backward-word       # Ctrl + Flèche gauche
 
 # setopt prompt_subst
 # autoload -U colors
@@ -40,7 +42,6 @@ bindkey '^[[3~' delete-char-or-list
 
 
 # # ajoute ~/bin au PATH
-# export no_proxy=gitlab.insee.fr
 # alias vi=vim
 #
 # source <(jj util completion zsh)
